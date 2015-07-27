@@ -6,6 +6,7 @@ myApp.controller('demoController', function ($scope) {
 
     $scope.countTo = 100;
     $scope.countFrom = 0;
+    $scope.filter = 'number';
 
     $scope.reCount = function () {
         $scope.countFrom = Math.ceil(Math.random() * 300);
