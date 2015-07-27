@@ -11,13 +11,6 @@ $ bower install angular-filter-count-to
 
 ## How to use angular count-to
 
-
-Include the javascript file.
-
-```
-<script src="angular.count-to.min.js"></script>
-```
-
 Inject the `count-to` directive in your app.
 
 ```
