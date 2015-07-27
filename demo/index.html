@@ -17,9 +17,9 @@
 <div class="container">
     <h2>Angular count-to directive</h2>
     <div class="hero-unit">
-        <h1 class="count" count-to="{{countTo}}" value="{{countFrom}}" duration="4"></h1><br>
+        <h1 class="count" count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="{{filter}}"></h1><br>
 
-        <p>Count to <span class="text-info">{{countTo}}</span> from <span class="text-info">{{countFrom}}</span> over <span class="text-warning">4</span> seconds</p>
+        <p>Count to <span class="text-info">{{countTo}}</span> from <span class="text-info">{{countFrom}}</span> over <span class="text-warning">4</span> seconds using <a href="https://docs.angularjs.org/api/ng/filter">Angular</a> <span class="text-info">{{filter}}</span> filter</p>
 
         <form class="form-horizontal">
             <!--<label for="duration">Duration</label>-->
@@ -28,6 +28,8 @@
             <input type="number" name="count_to" ng-model="countTo"/>
             <label for="count_from">Count from</label>
             <input type="number" name="count_from" ng-model="countFrom"/>
+            <label for="filter">Filter</label>
+            <input type="string" name="filter" ng-model="filter"/>
             <br><br>
             <button type="submit" ng-click="reCount()" class="btn btn-inverse btn-large">Randomize</button>
         </form>

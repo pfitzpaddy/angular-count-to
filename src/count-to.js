@@ -1,5 +1,5 @@
 var countTo = angular.module('countTo', [])
-    .directive('countTo', ['$timeout', function ($timeout) {
+    .directive('countTo', ['$filter', '$timeout', function ($filter, $timeout) {
         return {
             replace: false,
             scope: true,
@@ -12,8 +12,11 @@ var countTo = angular.module('countTo', [])
                     refreshInterval = 30;
                     step = 0;
                     scope.timoutId = null;
-                    countTo = parseInt(attrs.countTo) || 0;
-                    scope.value = parseInt(attrs.value, 10) || 0;
+                    scope.filter = attrs.filter;
+                    scope.fractionSize = attrs.fractionSize ? attrs.fractionSize : 0;
+                    scope.params = attrs.params ? attrs.params : scope.fractionSize;
+                    countTo = parseFloat(attrs.countTo) || 0;
+                    scope.value = parseFloat(attrs.value, 10) || 0;
                     duration = (parseFloat(attrs.duration) * 1000) || 0;
 
                     steps = Math.ceil(duration / refreshInterval);
@@ -28,9 +31,9 @@ var countTo = angular.module('countTo', [])
                         if (step >= steps) {
                             $timeout.cancel(scope.timoutId);
                             num = countTo;
-                            e.textContent = countTo;
+                            e.innerText = scope.filter ? $filter(scope.filter)(countTo, scope.params, scope.fractionSize) : Math.round(countTo);
                         } else {
-                            e.textContent = Math.round(num);
+                            e.innerText = scope.filter ?  $filter(scope.filter)(num, scope.params, scope.fractionSize) : Math.round(num);
                             tick();
                         }
                     }, refreshInterval);

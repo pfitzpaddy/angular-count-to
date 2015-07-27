@@ -4,8 +4,9 @@ var myApp = angular.module('myApp', ['countTo']);
 
 myApp.controller('demoController', function ($scope) {
 
-    $scope.countTo = 100;
+    $scope.countTo = 18200;
     $scope.countFrom = 0;
+    $scope.filter = 'number';
 
     $scope.reCount = function () {
         $scope.countFrom = Math.ceil(Math.random() * 300);
