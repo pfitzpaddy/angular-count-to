@@ -50,7 +50,7 @@
         <h2>Angular directive to animate counting to a number</h2>
         <h1 class="count" count-to="{{countTo}}" value="{{countFrom}}" duration="4"  filter="number"></h1><br>
         <p>Count to <span class="text-info">{{countTo}}</span> from <span class="text-info">{{countFrom}}</span> over
-            <span class="text-warning">4</span> seconds using <a href="https://docs.angularjs.org/api/ng/filter">Angular</a> <span class="text-info">{{filter}}</span> filter</p>
+            <span class="text-warning">4</span> seconds using <a href="https://docs.angularjs.org/api/ng/filter">Angular "{{filter}}" filter</a></p>
         <hr>
 
         <form class="form-horizontal">
@@ -69,7 +69,7 @@
         <br><br>
 
         <p>Example directive code</p>
-                  <pre><code ng-non-bindable>&lt;h1 count-to="{{model.countTo}}" duration="4" count-from="{{model.countFrom}} filter="{{model.number}}"&gt;&lt;/h1&gt;
+                  <pre><code ng-non-bindable>&lt;h1 count-to="{{model.countTo}}" count-from="{{model.countFrom}} duration="4" filter="{{model.number}}"&gt;&lt;/h1&gt;
                   </code></pre>
         <br>
 
