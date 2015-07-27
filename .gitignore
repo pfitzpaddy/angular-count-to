@@ -46,6 +46,10 @@ local.properties
 [Dd]ebug/
 [Rr]elease/
 x64/
+<<<<<<< HEAD
+=======
+build/
+>>>>>>> b7728879698ae0704617d8f610b01ee769c9b924
 [Bb]in/
 [Oo]bj/
 
@@ -192,6 +196,10 @@ $RECYCLE.BIN/
 *.egg
 *.egg-info
 dist/
+<<<<<<< HEAD
+=======
+build/
+>>>>>>> b7728879698ae0704617d8f610b01ee769c9b924
 eggs/
 parts/
 var/
@@ -212,5 +220,9 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
+<<<<<<< HEAD
 .idea/
 .idea/*
+=======
+.idea/
+>>>>>>> b7728879698ae0704617d8f610b01ee769c9b924
