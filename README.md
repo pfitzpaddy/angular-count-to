@@ -19,7 +19,13 @@ var myApp = angular.module('myApp', ['countTo']);
 
 Apply the directive to a dom element.
 ```
+ <!-- Number filter -->
  <span count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="number"></span>
+```
+
+```
+ <!-- Currency filter -->
+ <span count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="currency" params="$"></span>
 ```
 
 
