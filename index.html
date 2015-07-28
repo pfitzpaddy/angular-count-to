@@ -71,6 +71,8 @@
         
         <h2>Angular directive to animate counting to a currency</h2>
         <h1 class="count" count-to="{{countTo}}" value="{{countFrom}}" duration="4"  filter="currency" params="$"></h1><br>                  
+        <p>Count to <span class="text-info">{{countTo}}</span> from <span class="text-info">{{countFrom}}</span> over
+            <span class="text-warning">4</span> seconds using <a href="https://docs.angularjs.org/api/ng/currency">Angular "currency" filter</a></p>
         <p>Example currency code</p>          
                   <pre><code ng-non-bindable>&lt;h1 count-to="{{model.countTo}}" count-from="{{model.countFrom}}" filter="currency" duration="4" params="$" "&gt;&lt;/h1&gt;
                   </code></pre>
