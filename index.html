@@ -50,7 +50,7 @@
         <h2>Angular directive to animate counting to a number</h2>
         <h1 class="count" count-to="{{countTo}}" value="{{countFrom}}" duration="4"  filter="number"></h1><br>
         <p>Count to <span class="text-info">{{countTo}}</span> from <span class="text-info">{{countFrom}}</span> over
-            <span class="text-warning">4</span> seconds using <a href="https://docs.angularjs.org/api/ng/filter">Angular "{{filter}}" filter</a></p>
+            <span class="text-warning">4</span> seconds using <a href="https://docs.angularjs.org/api/ng/filter">AngularJS "{{filter}}" filter</a></p>
         <hr>
 
         <form class="form-horizontal">
@@ -64,7 +64,7 @@
             <button type="submit" ng-click="reCount()" class="btn btn-inverse btn-large">Randomize</button>
         </form>
 
-        <p>Example directive code</p>
+        <p>Example directive code (number)</p>
                   <pre><code ng-non-bindable>&lt;h1 count-to="{{model.countTo}}" count-from="{{model.countFrom}}" filter="number" duration="4" "&gt;&lt;/h1&gt;
                   </code></pre>
         <br><br>
@@ -72,8 +72,8 @@
         <h2>Angular directive to animate counting to a currency</h2>
         <h1 class="count" count-to="{{countTo}}" value="{{countFrom}}" duration="4"  filter="currency" params="$"></h1><br>                  
         <p>Count to <span class="text-info">{{countTo}}</span> from <span class="text-info">{{countFrom}}</span> over
-            <span class="text-warning">4</span> seconds using <a href="https://docs.angularjs.org/api/ng/currency">Angular "currency" filter</a></p>
-        <p>Example currency code</p>          
+            <span class="text-warning">4</span> seconds using <a href="https://docs.angularjs.org/api/ng/currency">AngularJS "currency" filter</a></p>
+        <p>Example directive code (currency)</p>          
                   <pre><code ng-non-bindable>&lt;h1 count-to="{{model.countTo}}" count-from="{{model.countFrom}}" filter="currency" duration="4" params="$" "&gt;&lt;/h1&gt;
                   </code></pre>
         <br>
