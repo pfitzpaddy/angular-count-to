@@ -14,7 +14,7 @@ $ bower install angular-filter-count-to
 Inject the `count-to` directive in your app.
 
 ```
-var myApp = angular.module('myApp', ['count-to']);
+var myApp = angular.module('myApp', ['countTo']);
 ```
 
 Apply the directive to a dom element.
