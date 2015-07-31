@@ -1,6 +1,6 @@
 {
   "name": "angular-filter-count-to",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular JS directive for counting to a number over time",
   "devDependencies": {
     "grunt": "~0.4.1",
