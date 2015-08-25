@@ -1,7 +1,7 @@
 # Angular Filter Count-To
 
 This project is an animated counter for Angularjs. The directive counts from one number to another over a configured duration. This forked version updates the original repository by including [AngularJS filter](https://docs.angularjs.org/api/ng/filter) options as well as the ability to display floating values.
-[Demo](http://pfitzpaddy.github.io/angular-count-to/)
+[Demo](http://pfitzpaddy.github.io/angular-filter-count-to/)
 
 ## Install via bower
 
