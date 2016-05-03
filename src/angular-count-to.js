@@ -31,9 +31,9 @@ var countTo = angular.module('countTo', [])
                         if (step >= steps) {
                             $timeout.cancel(scope.timoutId);
                             num = countTo;
-                            e.innerText = scope.filter ? $filter(scope.filter)(countTo, scope.params, scope.fractionSize) : Math.round(countTo);
+                            e.textContent = scope.filter ? $filter(scope.filter)(countTo, scope.params, scope.fractionSize) : Math.round(countTo);
                         } else {
-                            e.innerText = scope.filter ?  $filter(scope.filter)(num, scope.params, scope.fractionSize) : Math.round(num);
+                            e.textContent = scope.filter ?  $filter(scope.filter)(num, scope.params, scope.fractionSize) : Math.round(num);
                             tick();
                         }
                     }, refreshInterval);
