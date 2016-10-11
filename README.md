@@ -38,4 +38,4 @@ The following attributes can be set as numbers on the directive element.
 - ```duration```  how long the count should take in seconds.
 - ```filter```  the [AngularJS filter](https://docs.angularjs.org/api/ng/filter).
 - ```params```  the string of filter options.
-- ```fractionSize```  the decimal formatting.
+- ```fraction-size```  the decimal formatting.
