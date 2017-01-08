@@ -1,6 +1,6 @@
 {
   "name": "angular-filter-count-to",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "main": [
     "dist/angular-filter-count-to.min.js"
   ],
