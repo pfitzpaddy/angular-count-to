@@ -1,12 +1,12 @@
-var countTo = angular.module('countTo', [])
-    .directive('countTo', ['$filter', '$timeout', function ($filter, $timeout) {
+angular.module('ngCountTo', [])
+    .directive('ngCountTo', ['$filter', '$timeout', function ($filter, $timeout) {
         return {
             replace: false,
             scope: true,
             link: function (scope, element, attrs) {
 
                 var e = element[0];
-                var num, refreshInterval, duration, steps, step, countTo, value, increment;
+                var num, refreshInterval, duration, steps, step, ngCountTo, value, increment;
 
                 var calculate = function () {
                     refreshInterval = 30;
@@ -15,12 +15,12 @@ var countTo = angular.module('countTo', [])
                     scope.filter = attrs.filter;
                     scope.fractionSize = attrs.fractionSize ? attrs.fractionSize : 0;
                     scope.params = attrs.params ? attrs.params : scope.fractionSize;
-                    countTo = parseFloat(attrs.countTo) || 0;
+                    ngCountTo = parseFloat(attrs.ngCountTo) || 0;
                     scope.value = parseFloat(attrs.value, 10) || 0;
                     duration = (parseFloat(attrs.duration) * 1000) || 0;
 
                     steps = Math.ceil(duration / refreshInterval);
-                    increment = ((countTo - scope.value) / steps);
+                    increment = ((ngCountTo - scope.value) / steps);
                     num = scope.value;
                 }
 
@@ -30,10 +30,10 @@ var countTo = angular.module('countTo', [])
                         step++;
                         if (step >= steps) {
                             $timeout.cancel(scope.timoutId);
-                            num = countTo;
-                            e.innerText = scope.filter ? $filter(scope.filter)(countTo, scope.params, scope.fractionSize) : Math.round(countTo);
+                            num = ngCountTo;
+                            e.textContent = scope.filter ? $filter(scope.filter)(ngCountTo, scope.params, scope.fractionSize) : Math.round(countTo);
                         } else {
-                            e.innerText = scope.filter ?  $filter(scope.filter)(num, scope.params, scope.fractionSize) : Math.round(num);
+                            e.textContent = scope.filter ?  $filter(scope.filter)(num, scope.params, scope.fractionSize) : Math.round(num);
                             tick();
                         }
                     }, refreshInterval);
@@ -48,7 +48,7 @@ var countTo = angular.module('countTo', [])
                     tick();
                 }
 
-                attrs.$observe('countTo', function (val) {
+                attrs.$observe('ngCountTo', function (val) {
                     if (val) {
                         start();
                     }

@@ -1,25 +1,57 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 <head>
+    <meta charset='utf-8'/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+    <meta name="description" content="Angular-count-to : Angular directive to animate counting to a number"/>
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-    <title>Angular Count Up Demo</title>
+
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src="../build/angular-count-to.min.js"></script>
-    <!--<script src="../src/count-to.js"></script>-->
-    <script src="js/app.js"></script>
+    <script src="../js/angular-count-to.js"></script>
+    <script src="../js/app.js"></script>
     <style type="text/css">
         h1.count{
             color: #C76C6C;
         }
     </style>
+    <title>Angular-count-to</title>
 </head>
-<body ng-controller="demoController"><br>
-<div class="container">
-    <h2>Angular count-to directive</h2>
-    <div class="hero-unit">
-        <h1 class="count" count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="{{filter}}"></h1><br>
 
-        <p>Count to <span class="text-info">{{countTo}}</span> from <span class="text-info">{{countFrom}}</span> over <span class="text-warning">4</span> seconds using <a href="https://docs.angularjs.org/api/ng/filter">Angular</a> <span class="text-info">{{filter}}</span> filter</p>
+<body>
+
+<!-- HEADER -->
+<div>
+    <header>
+        <a href="https://github.com/sparkalow/angular-count-to">View on GitHub</a>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li>
+                        <a href="https://github.com/pfitzpaddy/angular-count-to/">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/pfitzpaddy/angular-count-to/zipball/master">Download this project as a .zip file</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/pfitzpaddy/angular-count-to/tarball/master">Download this project as a tar.gz file</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container" ng-app="myApp">
+    <br><br><br>
+    <div class="hero-unit" ng-controller="demoController">
+        <h1>Angular-count-to</h1>
+        <h2>Angular directive to animate counting to a number</h2>
+        <h1 class="count" ng-count-to="{{countTo}}" value="{{countFrom}}" duration="1"  filter="number"></h1><br>
+        <p>Count to <span class="text-info">{{countTo}}</span> from <span class="text-info">{{countFrom}}</span> over
+            <span class="text-warning">1</span> seconds using <a href="https://docs.angularjs.org/api/ng/filter">AngularJS "{{filter}}" filter</a></p>
+        <hr>
 
         <form class="form-horizontal">
             <!--<label for="duration">Duration</label>-->
@@ -28,18 +60,29 @@
             <input type="number" name="count_to" ng-model="countTo"/>
             <label for="count_from">Count from</label>
             <input type="number" name="count_from" ng-model="countFrom"/>
-            <label for="filter">Filter</label>
-            <input type="string" name="filter" ng-model="filter"/>
             <br><br>
             <button type="submit" ng-click="reCount()" class="btn btn-inverse btn-large">Randomize</button>
         </form>
 
+        <p>Example directive code (number)</p>
+                  <pre><code ng-non-bindable>&lt;h1 ng-count-to="{{model.countTo}}" count-from="{{model.countFrom}}" filter="number" duration="4" "&gt;&lt;/h1&gt;
+                  </code></pre>
         <br><br>
-        <p>Example directive code</p>
-        <code ng-non-bindable>
-            &lt;h1 count-to="{{model.countTo}}" duration="4" count-from="{{model.countFrom}}"&gt;&lt;/h1&gt;
-        </code>
+        
+        <h2>Angular directive to animate counting to a currency</h2>
+        <h1 class="count" ng-count-to="{{countTo}}" value="{{countFrom}}" duration="1"  filter="currency" params="$"></h1><br>                  
+        <p>Count to <span class="text-info">{{countTo}}</span> from <span class="text-info">{{countFrom}}</span> over
+            <span class="text-warning">1</span> seconds using <a href="https://docs.angularjs.org/api/ng/currency">AngularJS "currency" filter</a></p>
+        <p>Example directive code (currency)</p>          
+                  <pre><code ng-non-bindable>&lt;h1 ng-count-to="{{model.countTo}}" count-from="{{model.countFrom}}" filter="currency" duration="4" params="$" "&gt;&lt;/h1&gt;
+                  </code></pre>
         <br>
+        <!-- FOOTER  -->
+
+        <footer>
+            <a href="https://github.com/pfitzpaddy/angular-count-to" class="btn"><img src="images/GitHub-Mark-32px.png"/> View on GitHub</a>
+        </footer>
     </div>
+</div>
 </body>
 </html>
