@@ -1,7 +1,7 @@
 {
   "name": "angular-filter-count-to",
-  "version": "0.0.3",
-  "description": "Angular JS directive for counting to a number over time",
+  "version": "0.0.5",
+  "description": "Angular JS directive for tweening to a number",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-uglify": "~0.2.2"

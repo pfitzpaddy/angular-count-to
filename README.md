@@ -14,18 +14,18 @@ $ bower install angular-filter-count-to
 Inject the `count-to` directive in your app.
 
 ```
-var myApp = angular.module('myApp', ['countTo']);
+var myApp = angular.module('myApp', ['ngCountTo']);
 ```
 
 Apply the directive to a dom element.
 ```
  <!-- Number filter -->
- <span count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="number"></span>
+ <span ng-count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="number"></span>
 ```
 
 ```
  <!-- Currency filter -->
- <span count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="currency" params="$"></span>
+ <span ng-count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="currency" params="$"></span>
 ```
 
 
@@ -33,7 +33,7 @@ Apply the directive to a dom element.
 
 The following attributes can be set as numbers on the directive element.
 
-- ```count-to```  the number to count to.
+- ```ng-count-to```  the number to count to.
 - ```value```  the number to start counting from.
 - ```duration```  how long the count should take in seconds.
 - ```filter```  the [AngularJS filter](https://docs.angularjs.org/api/ng/filter).
