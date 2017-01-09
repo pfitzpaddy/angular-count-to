@@ -19,27 +19,27 @@
 7 verbose parsed url   href: '.' }
 8 silly lockFile 3a52ce78- .
 9 verbose lock . /Users/fitzpaddy/.npm/3a52ce78-.lock
-10 verbose tar pack [ '/Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package.tgz',
+10 verbose tar pack [ '/Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package.tgz',
 10 verbose tar pack   '.' ]
-11 verbose tarball /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package.tgz
+11 verbose tarball /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package.tgz
 12 verbose folder .
-13 info prepublish angular-filter-count-to@0.0.7
+13 info prepublish angular-filter-count-to@0.0.8
 14 silly lockFile 1f1177db-tar tar://.
 15 verbose lock tar://. /Users/fitzpaddy/.npm/1f1177db-tar.lock
-16 silly lockFile fbd65594-ilter-count-to-0-0-7-package-tgz tar:///Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package.tgz
-17 verbose lock tar:///Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package.tgz /Users/fitzpaddy/.npm/fbd65594-ilter-count-to-0-0-7-package-tgz.lock
+16 silly lockFile f812bc0b-ilter-count-to-0-0-8-package-tgz tar:///Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package.tgz
+17 verbose lock tar:///Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package.tgz /Users/fitzpaddy/.npm/f812bc0b-ilter-count-to-0-0-8-package-tgz.lock
 18 silly lockFile 1f1177db-tar tar://.
 19 silly lockFile 1f1177db-tar tar://.
-20 silly lockFile fbd65594-ilter-count-to-0-0-7-package-tgz tar:///Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package.tgz
-21 silly lockFile fbd65594-ilter-count-to-0-0-7-package-tgz tar:///Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package.tgz
-22 silly lockFile 8ee9fe5e-ar-filter-count-to-0-0-7-package /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package
-23 verbose lock /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package /Users/fitzpaddy/.npm/8ee9fe5e-ar-filter-count-to-0-0-7-package.lock
-24 silly lockFile 8ee9fe5e-ar-filter-count-to-0-0-7-package /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package
-25 silly lockFile 8ee9fe5e-ar-filter-count-to-0-0-7-package /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.7/package
+20 silly lockFile f812bc0b-ilter-count-to-0-0-8-package-tgz tar:///Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package.tgz
+21 silly lockFile f812bc0b-ilter-count-to-0-0-8-package-tgz tar:///Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package.tgz
+22 silly lockFile 89322e35-ar-filter-count-to-0-0-8-package /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package
+23 verbose lock /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package /Users/fitzpaddy/.npm/89322e35-ar-filter-count-to-0-0-8-package.lock
+24 silly lockFile 89322e35-ar-filter-count-to-0-0-8-package /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package
+25 silly lockFile 89322e35-ar-filter-count-to-0-0-8-package /Users/fitzpaddy/.npm/angular-filter-count-to/0.0.8/package
 26 silly lockFile 3a52ce78- .
 27 silly lockFile 3a52ce78- .
 28 silly publish { name: 'angular-filter-count-to',
-28 silly publish   version: '0.0.7',
+28 silly publish   version: '0.0.8',
 28 silly publish   description: 'AngularJS directive to animate counting to a number',
 28 silly publish   devDependencies: { grunt: '~0.4.1', 'grunt-contrib-uglify': '~0.2.2' },
 28 silly publish   homepage: 'http://pfitzpaddy.github.io/angular-filter-count-to/',
@@ -50,36 +50,36 @@
 28 silly publish   license: 'MIT',
 28 silly publish   readmeFilename: 'README.md',
 28 silly publish   readme: '# Angular Filter Count-To\n\nThis project is an animated counter for Angularjs. The directive counts from one number to another over a configured duration. This forked version updates the original repository by including [AngularJS filter](https://docs.angularjs.org/api/ng/filter) options as well as the ability to display floating values.\n[Demo](http://pfitzpaddy.github.io/angular-filter-count-to/)\n\n\n## Install via npm\n\n```\n$ npm install angular-filter-count-to\n```\n## Install via bower\n\n```\n$ bower install angular-filter-count-to\n```\n\n## How to use angular count-to\n\nInject the `count-to` directive in your app.\n\n```\nvar myApp = angular.module(\'myApp\', [\'ngCountTo\']);\n```\n\nApply the directive to a dom element.\n```\n <!-- Number filter -->\n <span ng-count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="number"></span>\n```\n\n```\n <!-- Currency filter -->\n <span ng-count-to="{{countTo}}" value="{{countFrom}}" duration="4" filter="currency" params="$"></span>\n```\n\n\n### Attributes\n\nThe following attributes can be set as numbers on the directive element.\n\n- ```ng-count-to```  the number to count to.\n- ```value```  the number to start counting from.\n- ```duration```  how long the count should take in seconds.\n- ```filter```  the [AngularJS filter](https://docs.angularjs.org/api/ng/filter).\n- ```params```  the string of filter options.\n- ```fraction-size```  the decimal formatting.\n',
-28 silly publish   gitHead: 'dd5009007e5a766d8ff87330a4357a17a068f5f0',
+28 silly publish   gitHead: '576214e8faa39039810db5f11df52aa1414a07e0',
 28 silly publish   bugs: { url: 'https://github.com/pfitzpaddy/angular-filter-count-to/issues' },
-28 silly publish   _id: 'angular-filter-count-to@0.0.7',
+28 silly publish   _id: 'angular-filter-count-to@0.0.8',
 28 silly publish   scripts: {},
-28 silly publish   _shasum: 'c57c90091f1ce496b34f3d34393c92fa88910d34',
+28 silly publish   _shasum: '7a1778e7521478f80202e519f32af10ea194b3c5',
 28 silly publish   _from: '.' }
 29 verbose request where is /angular-filter-count-to
 30 verbose request registry https://registry.npmjs.org/
-31 verbose request id cf9acb196509fc3b
+31 verbose request id b1371e2341bfb98a
 32 verbose url raw /angular-filter-count-to
 33 verbose url resolving [ 'https://registry.npmjs.org/', './angular-filter-count-to' ]
 34 verbose url resolved https://registry.npmjs.org/angular-filter-count-to
 35 verbose request where is https://registry.npmjs.org/angular-filter-count-to
-36 info trying registry request attempt 1 at 11:38:33
+36 info trying registry request attempt 1 at 12:07:34
 37 http PUT https://registry.npmjs.org/angular-filter-count-to
 38 http 403 https://registry.npmjs.org/angular-filter-count-to
 39 verbose headers { 'content-type': 'application/json',
 39 verbose headers   'cache-control': 'max-age=300',
 39 verbose headers   'content-length': '95',
 39 verbose headers   'accept-ranges': 'bytes',
-39 verbose headers   date: 'Sun, 08 Jan 2017 07:08:35 GMT',
+39 verbose headers   date: 'Sun, 08 Jan 2017 07:37:36 GMT',
 39 verbose headers   via: '1.1 varnish',
 39 verbose headers   connection: 'keep-alive',
-39 verbose headers   'x-served-by': 'cache-hhn1539-HHN',
+39 verbose headers   'x-served-by': 'cache-hhn1530-HHN',
 39 verbose headers   'x-cache': 'MISS',
 39 verbose headers   'x-cache-hits': '0',
-39 verbose headers   'x-timer': 'S1483859314.011758,VS0,VE1417',
+39 verbose headers   'x-timer': 'S1483861055.412455,VS0,VE1342',
 39 verbose headers   vary: 'Accept-Encoding' }
 40 error publish Failed PUT 403
-41 error Error: "You cannot publish over the previously published version 0.0.7." : angular-filter-count-to
+41 error Error: "You cannot publish over the previously published version 0.0.8." : angular-filter-count-to
 41 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
 41 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
 41 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:236:22)
