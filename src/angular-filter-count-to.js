@@ -14,7 +14,7 @@ angular.module('ngCountTo', [])
                     scope.timoutId = null;
                     scope.filter = attrs.filter;
                     scope.fractionSize = attrs.fractionSize ? attrs.fractionSize : 0;
-                    scope.params = attrs.params ? attrs.params : scope.fractionSize;
+                    scope.params = attrs.params ? attrs.params : undefined;
                     ngCountTo = parseFloat(attrs.ngCountTo) || 0;
                     scope.value = parseFloat(attrs.value, 10) || 0;
                     duration = (parseFloat(attrs.duration) * 1000) || 0;
